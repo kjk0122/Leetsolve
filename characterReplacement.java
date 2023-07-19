@@ -1,7 +1,7 @@
 public class characterReplacement {
     public static void main(String[] args) {
         String word = "ABCABC";
-        int num = 33;
+        int num = 31;
         int gcd = characterReplacement(word, num);
         System.out.println(gcd);
     }
