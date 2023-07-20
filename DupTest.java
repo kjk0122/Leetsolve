@@ -16,7 +16,7 @@ public class DupTest {
                 nums[j] = random.nextInt(maxValue + 1); // 0부터 maxValue 사이의 임의의 값 생성
             }
 
-            List<Integer> duplicates = Dup.findDuplicates(nums);
+            List<Integer> duplicates = Duplicates.findDuplicates(nums);
             System.out.println("Input: " + Arrays.toString(nums));
             System.out.println("Duplicates: " + duplicates);
             System.out.println();

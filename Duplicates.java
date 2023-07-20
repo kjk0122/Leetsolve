@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Dup {
+public class Duplicates {
     public static void main(String[] args) {
         int[] nums = {1, 2, 2, 3, 4, 4, 5};
         List<Integer> duplicates = findDuplicates(nums);
