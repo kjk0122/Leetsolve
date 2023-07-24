@@ -14,7 +14,7 @@ public class Rometoint {
         m.put('C', 100); m.put('D', 500);
         m.put('M', 1000);
         for (int i = 0; i < s.length(); i++) {
-            if (i < s.length() - 1 && m.get(s.charAt(i)) < m.get(s.charAt(i + 1))) {
+            if (i < s.length() - 1 && m.get(s.charAt(i)) < m.get(s.charAt(i + 1))) {// 4,9 판독을 위함
                 answer -= m.get(s.charAt(i));
             } else {
                 answer += m.get(s.charAt(i));
