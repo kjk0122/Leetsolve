@@ -13,7 +13,7 @@ public class IsValid {
             else if (c == '{')
                 stack.push('}');
             else if (c == '[')
-                stack.push(']');
+                stack.push(']');//푸시 함으로써 제거한다
             else if (stack.isEmpty() || stack.pop() != c)
                 return false;
         }
