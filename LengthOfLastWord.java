@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 public class LengthOfLastWord {
     public static void main(String[] args) {
-        String nums = "sdds fsfs";
+        String nums = "sdds fsfsds   ";
         int answer = lengthOfLastWord(nums);
         System.out.println(answer);
     }
