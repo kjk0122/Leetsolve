@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +12,7 @@ public class KidsWithCandies {
     }
 
     public static  List<Boolean>[] kidsWithCandies(int[] nums, int target) {
+        List<Boolean> answer = new ArrayList<>();
 
         return new List[]{} ; // 답 없음;;
     }
