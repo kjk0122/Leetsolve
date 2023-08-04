@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 public class KidsWithCandies {
@@ -11,9 +10,20 @@ public class KidsWithCandies {
         System.out.println(Arrays.toString(answer));
     }
 
-    public static  List<Boolean>[] kidsWithCandies(int[] nums, int target) {
+    public static List<Boolean>[] kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> answer = new ArrayList<>();
+        int max = 0;
+        for (int i = 0; i < candies.length; i++) {
+            max = Math.max(max, candies[i]);
+        }
+        for (int i = 0; i < candies.length; i++) {
+            if ((candies[i] + extraCandies) > max) {
 
-        return new List[]{} ; // 답 없음;;
+            } else {
+
+            }
+        }
+
+        return new List[]{}; // 답 없음;;
     }
 }
