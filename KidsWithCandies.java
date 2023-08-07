@@ -11,18 +11,19 @@ public class KidsWithCandies {
     }
 
     public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-        List<Boolean> answer = new ArrayList<Boolean>(candies.length);
-        int max = 0;
-        for (int i = 0; i < candies.length; i++) {
-            max = Math.max(max, candies[i]);
+        // 현재 가장 많은 사탕 개수를 찾습니다.
+        int maxCandies = 0;
+        for (int candy : candies) {
+            maxCandies = Math.max(maxCandies, candy);
         }
-        for (int i = 0; i < candies.length; i++) {
-            if ((candies[i] + extraCandies) >= max) {
-                answer.add(true);
-            } else {
-                answer.add(false);
-            }
+
+        List<Boolean> result = new ArrayList<>();
+
+        // 각 어린이에게 추가 사탕을 주고 나서 가장 많은 사탕을 가지게 되는지 판단합니다.
+        for (int candy : candies) {
+            result.add(candy + extraCandies >= maxCandies);
         }
-        return answer;
+
+        return result;
     }
 }
