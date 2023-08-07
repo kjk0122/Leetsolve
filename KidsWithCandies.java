@@ -20,7 +20,7 @@ public class KidsWithCandies {
         List<Boolean> result = new ArrayList<>();
 
         // 각 어린이에게 추가 사탕을 주고 나서 가장 많은 사탕을 가지게 되는지 판단합니다.
-        for (int candy : candies) {
+        for (int candy : candies) { //향상된 for문 기억하자...자꾸 까먹어 진짜...
             result.add(candy + extraCandies >= maxCandies);
         }
 
