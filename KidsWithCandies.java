@@ -4,26 +4,25 @@ import java.util.List;
 
 public class KidsWithCandies {
     public static void main(String[] args) {
-        int[] nums = {11, 7, 11, 2};
-        int target = 9;
-        List<Boolean>[] answer = kidsWithCandies(nums, target);
-        System.out.println(Arrays.toString(answer));
+        int[] nums = {2,3,5,1,3};
+        int target = 3;
+        List<Boolean> answer = kidsWithCandies(nums, target);
+        System.out.println(answer);
     }
 
-    public static List<Boolean>[] kidsWithCandies(int[] candies, int extraCandies) {
-        List<Boolean> answer = new ArrayList<>();
+    public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+        List<Boolean> answer = new ArrayList<Boolean>(candies.length);
         int max = 0;
         for (int i = 0; i < candies.length; i++) {
             max = Math.max(max, candies[i]);
         }
         for (int i = 0; i < candies.length; i++) {
-            if ((candies[i] + extraCandies) > max) {
-
+            if ((candies[i] + extraCandies) >= max) {
+                answer.add(true);
             } else {
-
+                answer.add(false);
             }
         }
-
-        return new List[]{}; // 답 없음;;
+        return answer;
     }
 }
