@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class MinimumCost {
+public class RemoveDuplicates {
     public static void main(String[] args) {
         int[] cost = {1, 2, 3};
         int answer = minimumCost(cost);
