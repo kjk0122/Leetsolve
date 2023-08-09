@@ -3,11 +3,11 @@ import java.util.Arrays;
 public class RemoveDuplicates {
     public static void main(String[] args) {
         int[] cost = {1, 2, 3};
-        int answer = minimumCost(cost);
+        int answer = removeDuplicates(cost);
         System.out.println(answer);
     }
 
-    public static int minimumCost(int[] cost) {
+    public static int removeDuplicates(int[] cost) {
         Arrays.sort(cost);
         int count = 0;
         int total = 0;
