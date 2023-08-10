@@ -7,19 +7,15 @@ public class RemoveDuplicates {
         System.out.println(answer);
     }
 
-    public static int removeDuplicates(int[] cost) {
-        Arrays.sort(cost);
-        int count = 0;
-        int total = 0;
-
-        for (int i = cost.length - 1; i >= 0; i--) {
-            if (count != 2) {
-                total += cost[i];
-                count++;
-            } else {
-                count = 0;
+    public static int removeDuplicates(int[] nums) {
+        int j = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[i - 1]) {
+                nums[j] = nums[i];
+                j++;
             }
         }
-        return total;
+        return j;
     }
+}
 }
