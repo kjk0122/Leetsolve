@@ -18,4 +18,3 @@ public class RemoveDuplicates {
         return j;
     }
 }
-}
