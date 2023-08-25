@@ -3,25 +3,49 @@ import java.util.HashMap;
 
 public class twoSum {
     public static void main(String[] args) {
-        int[] nums = {11, 7, 11, 2};
-        int target = 9;
-        int[] answer = twoSum(nums, target);
-        System.out.println(Arrays.toString(answer));
+
     }
 
-    public static int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+    public class ListNode {
+        int val;
+        ListNode next;
 
-        for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
-
-            if (map.containsKey(complement)) {
-                return new int[] { map.get(complement), i };
-            }
-
-            map.put(nums[i], i);
+        ListNode() {
         }
 
-        return new int[] { -1, -1 }; // 답 없음;;
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
+    public static ListNode twoSum(ListNode l1, ListNode l2) {
+        ListNode copyhead = new ListNode(0);
+        ListNode tail = copyhead;
+        int carry = 0;
+
+        while (l1 != null || l2 != null || carry != 0) {
+            int digit1 = (l1 != null) ? l1.val : 0;
+            int digit2 = (l2 != null) ? l2.val : 0;
+
+            int sum = digit1 + digit2 + carry;
+            int digit = sum % 10;
+            carry = sum / 10;
+
+            ListNode newNode = new ListNode(digit);
+            tail.next = newNode;
+            tail = tail.next;
+
+            l1 = (l1 != null) ? l1.next : null;
+            l2 = (l2 != null) ? l2.next : null;
+        }
+
+        ListNode result = copyhead.next;
+        copyhead.next = null;
+        return result;
     }
 }
