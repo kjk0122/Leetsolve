@@ -1,5 +1,5 @@
-import java.util.*;
-import java.util.stream.IntStream;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class MaxSlidingWindow {
     public static void main(String[] args) {
