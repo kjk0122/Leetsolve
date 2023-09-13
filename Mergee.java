@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Mergee {
     public static void main(String[] args) {
         int[] nums1 = {1, 2, 3, 0, 0, 0};

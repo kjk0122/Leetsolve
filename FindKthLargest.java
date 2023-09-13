@@ -12,7 +12,6 @@ public class FindKthLargest {
         //중복들 다 제거하자.
         Integer[] numss=Arrays.stream(nums).boxed().toArray(Integer[]::new);
         Arrays.sort(numss, Collections.reverseOrder());
-        int ans = numss[k-1];
-        return ans;
+        return numss[k-1];
     }
 }

@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.HashMap;
-
 public class LengthOfLastWord {
     public static void main(String[] args) {
         String nums = "sdds fsfsds   ";

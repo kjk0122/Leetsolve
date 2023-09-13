@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.HashMap;
-
 public class RemoveElement {
     public static void main(String[] args) {
         int[] nums = {11, 7, 9, 8, 9, 88, 99, 11, 2};

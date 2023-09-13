@@ -6,7 +6,7 @@ public class IsValid {
         System.out.println(isValid(s));
     }
     public static boolean isValid(String s) {
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
         for (char c : s.toCharArray()) {
             if (c == '(')
                 stack.push(')');

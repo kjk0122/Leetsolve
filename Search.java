@@ -4,8 +4,7 @@ public class Search {
     public static void main(String[] args) {
         int[] nums = {3, 5, 6, 0, 0, 1, 4};
         int target = 2;
-//        System.out.println(search(nums, target));
-        IntStream.rangeClosed(0, 10).forEach(System.out::println);
+       System.out.println(search(nums, target));
     }
 
     public static boolean search(int[] nums, int target) {
