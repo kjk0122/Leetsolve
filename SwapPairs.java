@@ -7,6 +7,8 @@ public class SwapPairs {
     }
 
     public static ListNode swapPairs(ListNode head) {
+        
+
         return head;
     }
 }
