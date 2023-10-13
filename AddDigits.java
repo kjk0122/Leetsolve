@@ -1,7 +1,6 @@
 public class AddDigits {
     public static void main(String[] args) {
         int k=22323;
-        System.out.println(args);
         System.out.println(addDigits(k));
     }
 
