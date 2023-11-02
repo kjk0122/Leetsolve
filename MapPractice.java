@@ -1,8 +1,10 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class MapPractice {
+    public static final String REGEXP_PATTERN_NO_CHAR = "^[a-zA-Z]*$";
 
     public static void main(String[] args) {
         Map<String, String> glossary = new HashMap<>();
@@ -37,10 +39,15 @@ public class MapPractice {
                 case 2:
                     System.out.print("새로운 영어 단어를 입력하세요: ");
                     String newWord = scanner.nextLine();
-                    System.out.print("단어의 뜻을 입력하세요: ");
-                    String meaning = scanner.nextLine();
-                    glossary.put(newWord, meaning);
-                    System.out.println("새로운 단어가 사전에 추가되었습니다.");
+                    boolean isEnglishCheck = Pattern.matches(REGEXP_PATTERN_NO_CHAR, newWord);
+                    if(isEnglishCheck) {
+                        System.out.print("단어의 뜻을 입력하세요: ");
+                        String meaning = scanner.nextLine();
+                        glossary.put(newWord, meaning);
+                        System.out.println("새로운 단어가 사전에 추가되었습니다.");
+                    }else{
+                        System.out.println("영어단어가 아닙니다. 초기선택으로 돌아갑니다.");
+                    }
                     break;
                 case 3:
                     System.out.println("전체 사전: " + glossary);
@@ -55,7 +62,7 @@ public class MapPractice {
         }
     }
 
-    public static void dictionary(Map<String, String> h, String x) {
+    public static void dictionary(Map<String, String> h, String x) throws IllegalArgumentException {
         if (h.containsKey(x)) {
             System.out.println("해당 단어의 뜻: " + h.get(x));
         } else {
