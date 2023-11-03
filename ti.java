@@ -8,15 +8,16 @@ public class ti {
         int n = 5;
         int[] lottos = {0, 0, 0, 0, 0, 0};
         int[] win_nums = {31, 10, 45, 1, 6, 19};
+        solution(x,n);
         solution2(lottos, win_nums);
     }
 
-    public static long[] solution(int x, int n) {
+    public static void solution(int x, int n) {
         long[] answer = new long[n];
         for (int i = 0; i < n; i++) {
             answer[i] = (long) x * (i + 1);
         }
-        return answer;
+        System.out.println(Arrays.toString(answer));
     }
 
 
@@ -24,11 +25,12 @@ public class ti {
         int wild = 0;
         int win = 0;
         int[] answer = new int[2];
-        for (int j = 0; j < lottos.length; j++) {
-            if (lottos[j] == 0) {wild++;
+        for (int lotto : lottos) {
+            if (lotto == 0) {
+                wild++;
             } else {
-                for (int i = 0; i < win_nums.length; i++) {
-                    if (lottos[j] == win_nums[i]) win++;
+                for (int win_num : win_nums) {
+                    if (lotto == win_num) win++;
                 }
             }
         }
