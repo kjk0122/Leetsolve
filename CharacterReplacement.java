@@ -1,20 +1,18 @@
 public class CharacterReplacement {
     public static void main(String[] args) {
-        String strValue = "Hello_ Java.";
-        StringBuilder sb = new StringBuilder(strValue);
+        int num1 = 60;
+        int num2 = 48;
 
-        int findIndex = sb.indexOf("_");
+        int gcd = getGCD(num1, num2);
+        System.out.println("the greatest common denominator : " + gcd);
+        System.out.println("the lowest common multiple : " + (num1 * num2) / gcd);
 
-        System.out.println("[변경 전]");
-        System.out.println(strValue);
 
-        if(findIndex > 0) {
-            sb.setCharAt(findIndex, ',');
-            strValue = sb.toString();
-        }
-
-        System.out.println("\n[변경 후]");
-        System.out.println(strValue);
     }
-
+    public static int getGCD(int num1, int num2) {
+        if (num1 % num2 == 0) {
+            return num2;
+        }
+        return getGCD(num2, num1%num2);
+    }
 }
