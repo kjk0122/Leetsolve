@@ -41,10 +41,12 @@ public class CaseDiscount {
 
         return answer;
     }
-    public String solution3(String my_string) {
-        // StringBuilder를 사용하여 문자열 뒤집기
-        StringBuilder reversed = new StringBuilder(my_string).reverse();
-
-        return String.valueOf(reversed);
-    }
+//    public String solution3(String my_string) {
+//        // StringBuilder를 사용하여 문자열 뒤집기
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(my_string);
+//        sb.reverse();
+//
+//        return sb.toString();
+//    }
 }
