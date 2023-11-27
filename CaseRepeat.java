@@ -15,4 +15,8 @@ public class CaseRepeat {
         }
         return sb.toString();
     }
+
+    public String caseRepeat2(String my_string, int n) {
+        return my_string.repeat(n);
+    }
 }
