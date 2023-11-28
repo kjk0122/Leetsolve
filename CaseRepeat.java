@@ -3,7 +3,9 @@ public class CaseRepeat {
     public static void main(String[] args) {
         String my_string="wewe";
         int n = 2;
+        String letter="w";
         System.out.println(caseRepeat(my_string,n));
+        System.out.println(stringRemove(my_string,letter));
     }
 
     public static String caseRepeat(String my_string, int n) {
@@ -15,8 +17,12 @@ public class CaseRepeat {
         }
         return sb.toString();
     }
-
+//replace([기존문자],[바꿀문자])
+//    a= a.replace("대한", "민국");
     public String caseRepeat2(String my_string, int n) {
         return my_string.repeat(n);
+    }
+    public static String stringRemove(String my_string, String letter) {
+        return my_string.replace(letter,"");
     }
 }
