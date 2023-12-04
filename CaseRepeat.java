@@ -20,7 +20,7 @@ public class CaseRepeat {
         return sb.toString();
     }
 //replace([기존문자],[바꿀문자])
-//    a= a.replace("대한", "민국");
+//    a= a.replace("대한",    "민국");
     public String caseRepeat2(String my_string, int n) {
         return my_string.repeat(n);
     }
